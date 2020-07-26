@@ -64,7 +64,7 @@ function compile() {
     builtin_zstd=yes
 }
 
-cd /godot-${GODOT_VERSION}-${GODOT_RELEASE} \
+cd /root/godot-${GODOT_VERSION}-${GODOT_RELEASE} \
 
 compile armv7 > /dev/null
 #compile arm64v8 > /dev/null
