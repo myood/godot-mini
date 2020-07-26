@@ -71,5 +71,5 @@ compile arm64v8 > /dev/null
 compile x86 > /dev/null
 compile x86_64 > /dev/null
 
-cd platform/android/java \
+cd platform/android/java
 ./gradlew generateGodotTemplates > /dev/null
