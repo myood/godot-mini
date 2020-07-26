@@ -71,5 +71,7 @@ compile armv7 > /dev/null
 #compile x86 > /dev/null
 #compile x86_64 > /dev/null
 
+export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
+echo $ANDROID_NDK_HOME
 cd platform/android/java
 ./gradlew generateGodotTemplates > /dev/null
