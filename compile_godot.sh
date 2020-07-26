@@ -62,5 +62,3 @@ scons -j8 platform=server tools=no target=release bits=64 \
     builtin_xatlas=no \
     builtin_zlib=no \
     builtin_zstd=yes
-
-strip bin/$(ls bin)
