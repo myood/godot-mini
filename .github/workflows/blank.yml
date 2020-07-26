@@ -26,10 +26,10 @@ jobs:
       run: |
         chmod +x ${GITHUB_WORKSPACE}/compile_godot.sh
         ${GITHUB_WORKSPACE}/compile_godot.sh
-        - mkdir -p -v ${GITHUB_WORKSPACE}/artifacts
-        - cp -r /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/* ${GITHUB_WORKSPACE}/artifacts/
-        - cd ${GITHUB_WORKSPACE}/artifacts/
-        - strip $(ls)
+        mkdir -p -v ${GITHUB_WORKSPACE}/artifacts
+        cp -r /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/* ${GITHUB_WORKSPACE}/artifacts/
+        cd ${GITHUB_WORKSPACE}/artifacts/
+        strip $(ls)
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
@@ -51,8 +51,8 @@ jobs:
       run: |
         chmod +x ${GITHUB_WORKSPACE}/compile_android_templates.sh
         ${GITHUB_WORKSPACE}/compile_android_templates.sh
-        - mkdir -p -v ${GITHUB_WORKSPACE}/artifacts
-        - cp -r /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/* ${GITHUB_WORKSPACE}/artifacts/
+        mkdir -p -v ${GITHUB_WORKSPACE}/artifacts
+        cp -r /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/* ${GITHUB_WORKSPACE}/artifacts/
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
