@@ -3,7 +3,7 @@
 set -e
 set -x
 
-cd /godot-${GODOT_VERSION}-${GODOT_RELEASE}
+cd /root/godot-${GODOT_VERSION}-${GODOT_RELEASE}
 scons -j8 platform=server tools=no target=release bits=64 \
     --config=force \
     progress=yes \
