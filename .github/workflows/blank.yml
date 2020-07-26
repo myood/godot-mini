@@ -26,6 +26,15 @@ jobs:
       run: |
         chmod +x ${GITHUB_WORKSPACE}/compile_godot.sh
         ${GITHUB_WORKSPACE}/compile_godot.sh
+        - mkdir -p -v ${GITHUB_WORKSPACE}/artifacts
+        - cp -r /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/* ${GITHUB_WORKSPACE}/artifacts/
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        # Artifact name
+        #name: # optional
+        # A file, directory or wildcard pattern that describes what to upload
+        path: ${GITHUB_WORKSPACE}/artifacts
   # This workflow contains a single job called "build"
   build_android_templates:
     # The type of runner that the job will run on
@@ -40,3 +49,12 @@ jobs:
       run: |
         chmod +x ${GITHUB_WORKSPACE}/compile_android_templates.sh
         ${GITHUB_WORKSPACE}/compile_android_templates.sh
+        - mkdir -p -v ${GITHUB_WORKSPACE}/artifacts
+        - cp -r /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/* ${GITHUB_WORKSPACE}/artifacts/
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        # Artifact name
+        #name: # optional
+        # A file, directory or wildcard pattern that describes what to upload
+        path: ${GITHUB_WORKSPACE}/artifacts
