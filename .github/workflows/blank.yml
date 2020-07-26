@@ -2,6 +2,10 @@
 
 name: CI
 
+env:
+  GODOT_VERSION: 3.2.2
+  GODOT_RELEASE: stable
+  
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
@@ -26,17 +30,14 @@ jobs:
       run: |
         chmod +x ${GITHUB_WORKSPACE}/compile_godot.sh
         ${GITHUB_WORKSPACE}/compile_godot.sh
-        mkdir -p -v ${GITHUB_WORKSPACE}/artifacts
-        cp -r /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/* ${GITHUB_WORKSPACE}/artifacts/
-        cd ${GITHUB_WORKSPACE}/artifacts/
-        strip $(ls)
+        strip /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/godot_server.x11.opt.64
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
         #name: # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: ${GITHUB_WORKSPACE}/artifacts
+        path: /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin
   # This workflow contains a single job called "build"
   build_android_templates:
     # The type of runner that the job will run on
@@ -59,4 +60,4 @@ jobs:
         # Artifact name
         #name: # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: ${GITHUB_WORKSPACE}/artifacts
+        path: /godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin
