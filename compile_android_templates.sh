@@ -66,10 +66,12 @@ function compile() {
 
 cd /godot-${GODOT_VERSION}-${GODOT_RELEASE} \
 
-compile armv7 > /dev/null
-compile arm64v8 > /dev/null
-compile x86 > /dev/null
-compile x86_64 > /dev/null
+compile $1
 
-cd platform/android/java
-./gradlew generateGodotTemplates > /dev/null
+#compile armv7 > /dev/null
+#compile arm64v8 > /dev/null
+#compile x86 > /dev/null
+#compile x86_64 > /dev/null
+
+#cd platform/android/java
+#./gradlew generateGodotTemplates > /dev/null
