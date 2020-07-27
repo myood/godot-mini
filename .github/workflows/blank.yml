@@ -35,9 +35,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: godot-3.2.2-stable-release
+        name: godot-${GODOT_VERSION}-${GODOT_RELEASE}-release-editor
         # A file, directory or wildcard pattern that describes what to upload
-        path: /root/godot-3.2.2-stable/bin/*
+        path: /root/godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/*
   # This workflow contains a single job called "build"
   build_android_templates:
     # The type of runner that the job will run on
@@ -56,6 +56,6 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: godot-3.2.2-stable-release-templates
+        name: godot-${GODOT_VERSION}-${GODOT_RELEASE}-release-templates
         # A file, directory or wildcard pattern that describes what to upload
-        path: /root/godot-3.2.2-stable/bin/*
+        path: /root/godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/*
