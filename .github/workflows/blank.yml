@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: godot-${GODOT_VERSION}-${GODOT_RELEASE}-release-editor
+        name: editor-godot-${GODOT_VERSION}-${GODOT_RELEASE}-release
         # A file, directory or wildcard pattern that describes what to upload
         path: /root/godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/*
   # This workflow contains a single job called "build"
@@ -56,6 +56,6 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: godot-${GODOT_VERSION}-${GODOT_RELEASE}-release-templates
+        name: templates-godot-${GODOT_VERSION}-${GODOT_RELEASE}-release
         # A file, directory or wildcard pattern that describes what to upload
         path: /root/godot-${GODOT_VERSION}-${GODOT_RELEASE}/bin/*
