@@ -67,6 +67,7 @@ function compile() {
 cd /root/godot-${GODOT_VERSION}-${GODOT_RELEASE} \
 
 compile armv7 > /dev/null
+ls bin/
 #compile arm64v8 > /dev/null
 #compile x86 > /dev/null
 #compile x86_64 > /dev/null
