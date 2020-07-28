@@ -50,7 +50,7 @@ function compile() {
     module_xatlas_unwrap_enabled=no \
     builtin_bullet=yes \
     builtin_libtheora=no \
-    builtin_libvpx=yes \
+    builtin_libvpx=no \
     builtin_libwebp=yes \
     builtin_mbedtls=yes \
     builtin_miniupnpc=yes \
