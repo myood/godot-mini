@@ -53,13 +53,13 @@ function compile() {
     builtin_libtheora=no \
     builtin_libvpx=no \
     builtin_libwebp=no \
-    builtin_mbedtls=yes \
+    builtin_mbedtls=no \
     builtin_miniupnpc=no \
     builtin_opus=no \
     builtin_pcre2=no \
     builtin_pcre2_with_jit=no \
     builtin_recast=no \
-    builtin_squish=yes \
+    builtin_squish=no \
     builtin_xatlas=no \
     builtin_zlib=yes \
     builtin_zstd=yes
