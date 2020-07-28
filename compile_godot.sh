@@ -4,7 +4,7 @@ set -e
 set -x
 
 cd /root/godot-${GODOT_VERSION}-${GODOT_RELEASE}
-scons -j8 platform=server tools=yes target=release bits=64 \
+scons -j8 platform=server tools=yes target=release_debug bits=64 \
     --config=force \
     progress=yes \
     verbose=yes \
