@@ -7,6 +7,7 @@ function compile() {
     scons -j8 platform=android target=release android_arch=$1 \
     --config=force \
     progress=yes \
+    optimize=size \
     verbose=no \
     deprecated=no \
     minizip=no \
@@ -53,13 +54,13 @@ function compile() {
     builtin_libvpx=no \
     builtin_libwebp=no \
     builtin_mbedtls=yes \
-    builtin_miniupnpc=yes \
-    builtin_opus=yes \
+    builtin_miniupnpc=no \
+    builtin_opus=no \
     builtin_pcre2=no \
     builtin_pcre2_with_jit=no \
-    builtin_recast=yes \
+    builtin_recast=no \
     builtin_squish=yes \
-    builtin_xatlas=yes \
+    builtin_xatlas=no \
     builtin_zlib=yes \
     builtin_zstd=yes
 }
