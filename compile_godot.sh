@@ -11,7 +11,7 @@ scons -j8 platform=server tools=yes target=release_debug bits=64 \
     deprecated=no \
     minizip=no \
     xaudio2=no \
-    disable_3d=yes \
+    disable_3d=no \
     disable_advanced_gui=yes \
     debug_symbols=no \
     module_arkit_enabled=no \
