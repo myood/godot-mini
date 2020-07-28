@@ -34,7 +34,7 @@ scons -j8 platform=server tools=yes target=release_debug bits=64 \
     module_opus_enabled=no \
     module_pvr_enabled=no \
     module_recast_enabled=no \
-    module_regex_enabled=no \
+    module_regex_enabled=yes \
     module_squish_enabled=no \
     module_svg_enabled=no \
     module_tga_enabled=no \
