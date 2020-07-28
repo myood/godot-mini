@@ -55,8 +55,8 @@ function compile() {
     builtin_mbedtls=yes \
     builtin_miniupnpc=yes \
     builtin_opus=yes \
-    builtin_pcre2=yes \
-    builtin_pcre2_with_jit=yes \
+    builtin_pcre2=no \
+    builtin_pcre2_with_jit=no \
     builtin_recast=yes \
     builtin_squish=yes \
     builtin_xatlas=yes \
