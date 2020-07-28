@@ -51,7 +51,7 @@ function compile() {
     builtin_bullet=yes \
     builtin_libtheora=no \
     builtin_libvpx=no \
-    builtin_libwebp=yes \
+    builtin_libwebp=no \
     builtin_mbedtls=yes \
     builtin_miniupnpc=yes \
     builtin_opus=yes \
