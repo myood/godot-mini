@@ -49,7 +49,7 @@ function compile() {
     module_websocket_enabled=no \
     module_xatlas_unwrap_enabled=no \
     builtin_bullet=yes \
-    builtin_libtheora=yes \
+    builtin_libtheora=no \
     builtin_libvpx=yes \
     builtin_libwebp=yes \
     builtin_mbedtls=yes \
