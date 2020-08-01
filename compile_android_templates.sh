@@ -13,7 +13,7 @@ function compile() {
     minizip=no \
     xaudio2=no \
     disable_3d=yes \
-    disable_advanced_gui=yes \
+    disable_advanced_gui=no \
     debug_symbols=no \
     module_arkit_enabled=no \
     module_assimp_enabled=no \
