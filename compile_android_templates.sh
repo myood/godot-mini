@@ -4,7 +4,7 @@ set -e
 set -x
 
 function compile() {
-    scons -j8 platform=android target=release android_arch=$1 \
+    scons -j8 platform=android target=$1 android_arch=$2 \
     --config=force \
     progress=yes \
     optimize=size \
@@ -67,11 +67,11 @@ function compile() {
 
 cd /root/godot-${GODOT_VERSION}-${GODOT_RELEASE} \
 
-compile armv7 > /dev/null
-ls bin/
-#compile arm64v8 > /dev/null
-#compile x86 > /dev/null
-#compile x86_64 > /dev/null
+compile release armv7 > /dev/null
+compile release arm64v8 > /dev/null
+compile release x86 > /dev/null
+compile release x86_64 > /dev/null
+compile debug x86 > /dev/null
 
 export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
 echo $ANDROID_NDK_HOME
