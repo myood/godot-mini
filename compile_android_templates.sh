@@ -35,7 +35,7 @@ function compile() {
     module_opus_enabled=no \
     module_pvr_enabled=no \
     module_recast_enabled=no \
-    module_regex_enabled=no \
+    module_regex_enabled=yes \
     module_squish_enabled=no \
     module_svg_enabled=no \
     module_tga_enabled=no \
@@ -56,8 +56,8 @@ function compile() {
     builtin_mbedtls=no \
     builtin_miniupnpc=no \
     builtin_opus=no \
-    builtin_pcre2=no \
-    builtin_pcre2_with_jit=no \
+    builtin_pcre2=yes \
+    builtin_pcre2_with_jit=yes \
     builtin_recast=no \
     builtin_squish=no \
     builtin_xatlas=no \
