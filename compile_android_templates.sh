@@ -71,7 +71,10 @@ compile release armv7 > /dev/null
 compile release arm64v8 > /dev/null
 compile release x86 > /dev/null
 compile release x86_64 > /dev/null
+compile debug armv7 > /dev/null
+compile debug arm64v8 > /dev/null
 compile debug x86 > /dev/null
+compile debug x86_64 > /dev/null
 
 export ANDROID_NDK_HOME=$ANDROID_NDK_ROOT
 echo $ANDROID_NDK_HOME
