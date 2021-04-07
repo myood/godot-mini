@@ -19,9 +19,9 @@ jobs:
       - name: Make apt sources.list use the default Ubuntu repositories
         run: |
           sudo bash -c -- 'echo "deb http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse" > /etc/apt/sources.list'
-          sudo bash -c -- 'echo "deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse" > /etc/apt/sources.list'
-          sudo bash -c -- 'echo "deb http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse" > /etc/apt/sources.list'
-          sudo bash -c -- 'echo "deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse" > /etc/apt/sources.list'
+          sudo bash -c -- 'echo "deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse" >> /etc/apt/sources.list'
+          sudo bash -c -- 'echo "deb http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse" >> /etc/apt/sources.list'
+          sudo bash -c -- 'echo "deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse" >> /etc/apt/sources.list'
           sudo apt-get update
       # Install all packages (except scons)
       - name: Configure dependencies
