@@ -48,5 +48,5 @@ jobs:
           strip bin/godot_server.x11.opt.tools.64
       - uses: actions/upload-artifact@v2
         with:
-          name: godot_server.x11
-          path: bin/godot_server.x11.opt.tools.64
+          name: godot-headless
+          path: bin/*
