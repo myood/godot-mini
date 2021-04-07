@@ -1,12 +1,6 @@
 name: ☁ Server Builds
 on: [push, pull_request]
 
-# Global Cache Settings
-env:
-  GODOT_BASE_BRANCH: 3.2
-  SCONSFLAGS: platform=server verbose=yes warnings=all werror=yes debug_symbols=no --jobs=2
-  SCONS_CACHE_LIMIT: 4096
-
 jobs:
   linux-editor:
     runs-on: "ubuntu-20.04"
@@ -39,7 +33,6 @@ jobs:
           python-version: '3.x'
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
-
       # Setup scons, print python version and scons version info, so if anything is broken it won't run the build.
       - name: Configuring Python packages
         run: |
@@ -50,4 +43,4 @@ jobs:
       # We should always be explicit with our flags usage here since it's gonna be sure to always set those flags
       - name: Compilation
         run: |
-          scons -j2 verbose=yes warnings=all werror=yes platform=server tools=yes target=release_debug module_mono_enabled=yes mono_glue=no
+          scons -j8 platform=server tools=yes target=release_debug
