@@ -58,8 +58,12 @@ jobs:
           SCONS_CACHE: ${{github.workspace}}/.scons_cache/
           ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk/${{env.ANDROID_NDK_VERSION}}/
         run: |
+          scons target=debug tools=no android_arch=x86_64
+          scons target=debug tools=no android_arch=x86
           scons target=release tools=no android_arch=armv7
           scons target=release tools=no android_arch=arm64v8
+          scons target=release tools=no android_arch=x86
+          scons target=release tools=no android_arch=x86_64
           cd platform/android/java
           ./gradlew generateGodotTemplates
           cd ../../..
